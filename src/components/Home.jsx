@@ -4,7 +4,8 @@ import { useState } from 'react';
 import cart from "../assets/cart-icon.svg"
 import search from "../assets/search-icon.svg"
 import account from "../assets/account-icon.svg"
-import background from "../assets/background.jpeg"
+import background from "../assets/background2.jpg"
+import logo from "../assets/logo.png"
 
 import styles from '../style/Home.module.css';
 
@@ -30,8 +31,8 @@ const Header = () => {
     <>
       <header className={styles.header}>
         <div className={styles.headerLeft}>
-          <img src="." alt="brand logo" />
-          <h2>Brand</h2>
+          <img src={logo} alt="brand logo" className={styles.logo} />
+          <h2>PRO-IEK-TO</h2>
         </div>
         <nav className={styles.headerRight}>
             <Link to="shop" className={styles.link}>Shop</Link>
