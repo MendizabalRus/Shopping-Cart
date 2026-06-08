@@ -1,10 +1,10 @@
-import styles from "../style/Shop.module.css"
+import styles from '../style/Shop.module.css';
 
 const Shop = () => {
-    return(
-        <>
-            
-        </>
-    );
-}
+  return (
+    <>
+      <div>Hello</div>
+    </>
+  );
+};
 export default Shop;
