@@ -1,0 +1,100 @@
+@import url("./variables.css");
+
+.shop {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto 1fr;
+    font-family: var(--font);
+}
+
+.banner {
+    border-bottom: 2px solid var(--primary-color);
+    grid-row: 1/2;
+    grid-column: 1/3;
+    padding: 20px;
+    text-align: center;
+}
+
+.filters {
+    border-right: 2px solid var(--primary-color);
+    grid-row: 2/3;
+    grid-column: 1/2;
+    padding: 20px;
+}
+
+/*
+    PRODCUT LIST
+*/
+
+.productList {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    padding: 20px;
+}
+
+.productList > hr {
+    margin-bottom: 20px;
+}
+
+.productsDisplay {
+    display: grid;
+    justify-content: space-evenly;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+/*
+    PRODUCT CARD
+*/
+
+.productCard {
+    width: 300px;
+    height: auto;
+    outline: 1px solid black;
+}
+
+.productCardText {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+}
+
+.productCardInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.productCardInfo > p {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.productCardInfoSizes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.productCardInfoSizes > ul {
+    display: flex;
+    list-style: none;
+    padding: 0px;
+    gap: 5px;
+}
+
+.productCardInfoSizes li {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.productCardPrice {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 20px;
+}
