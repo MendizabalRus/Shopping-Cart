@@ -1,16 +1,9 @@
-import Header from './Header';
-import Footer from './Footer';
-
 import styles from '../style/Home.module.css';
 
 const Home = () => {
   return (
     <>
-      <div className={styles.aboveTheFold}>
-        <Header />
         <Hero />
-      </div>
-      <Footer />
     </>
   );
 };

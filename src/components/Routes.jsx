@@ -6,13 +6,13 @@ import ProductPage from './ProductPage.jsx';
 
 const routes = [
   {
-    path: '/',
-    element: <Home />,
-    errorElement: <ErrorPage />,
-  },
-  {
     element: <MainLayout />,
+    errorElement: <ErrorPage />,
     children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
       {
         path: 'shop',
         element: <Shop />,

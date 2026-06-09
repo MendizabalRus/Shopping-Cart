@@ -1,11 +1,5 @@
 @import url("./variables.css");
 
-.aboveTheFold {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
 .hero {
     flex: 1;
     background-color: black;
