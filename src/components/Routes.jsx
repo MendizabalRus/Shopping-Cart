@@ -25,7 +25,8 @@ const routes = [
             `https://fakestoreapi.com/products/${params.productId}`
           );
           return response.json();
-        }
+        },
+        hydrateFallbackElement: <p>Loading...</p>
       }
     ],
   },

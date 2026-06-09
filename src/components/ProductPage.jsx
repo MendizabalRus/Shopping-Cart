@@ -1,11 +1,14 @@
 import { useState } from 'react';
-import { useLoaderData } from 'react-router';
+
+import { useLoaderData, useOutletContext } from 'react-router';
 
 import styles from '../style/ProductPage.module.css';
 
 const ProductPage = () => {
+  //parameters from loader
   const product = useLoaderData();
 
+  // quantity setting
   const [quantity, setQuantity] = useState(1);
 
   const handleQuantityChange = (e) => {
@@ -21,6 +24,28 @@ const ProductPage = () => {
     setQuantity((prev) => prev + 1);
   };
 
+  //using [cart, setCart] state from MainLayout as context
+  const { setCart } = useOutletContext();
+
+  //handleing adding to cart
+  const handleAddToCart = (product, quantity) => {
+    setCart((prev) => {
+      const existingProduct = prev.find((item) => item.product.id === product.id);
+
+      if (existingProduct) {
+        return prev.map((item) => item.product.id === product.id ?
+          {
+            ...item,
+            quantity: item.quantity + quantity,
+          }
+          : item
+        );
+      }
+
+      return [...prev, { product, quantity }];
+    });
+  };
+
   return (
     <div className={styles.productPage}>
       <img
@@ -34,13 +59,22 @@ const ProductPage = () => {
         <hr />
         <div className={styles.buyingSection}>
           <div className={styles.quantity}>
-            <p onClick={() => handleDecrement()} className={styles.quantities}>-</p>
+            <p onClick={() => handleDecrement()} className={styles.quantities}>
+              -
+            </p>
             <hr />
             <p onChange={() => handleQuantityChange}>{quantity}</p>
             <hr />
-            <p onClick={() => handleIncrement()} className={styles.quantities}>+</p>
+            <p onClick={() => handleIncrement()} className={styles.quantities}>
+              +
+            </p>
           </div>
-          <button className={styles.addToCart}>Add {quantity} to cart</button>
+          <button
+            className={styles.addToCart}
+            onClick={() => handleAddToCart(product, quantity)}
+          >
+            Add {quantity} to cart
+          </button>
         </div>
       </div>
     </div>
