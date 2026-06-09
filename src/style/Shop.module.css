@@ -53,6 +53,13 @@
     outline: 1px solid black;
 }
 
+.productCardImg {
+    height: 300px;
+    padding: 10px;
+    justify-self: center;
+    align-self: center;
+}
+
 .productCardText {
     display: flex;
     justify-content: space-between;
