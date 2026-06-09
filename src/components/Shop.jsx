@@ -1,8 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import styles from '../style/Shop.module.css';
-
-import productImage from '../assets/product-card-default.svg';
+import { Link } from 'react-router';
 
 const Shop = () => {
   const [products, setProducts] = useState([]);
@@ -50,16 +49,17 @@ const Filters = () => {
 const ProductList = (products) => {
   return (
     <div className={styles.productList}>
-      <h3>nº items</h3>
+      <h3>{products.products.length} items</h3>
       <hr />
       <div className={styles.productsDisplay}>
         {products.products.map((product) => (
-          <ProductCard 
-            key={product.title}
-            title={product.title}
-            image={product.image}
-            price={product.price}
-        />
+          <Link to={`/shop/${product.id}`} className={styles.link} key={product.title}>
+            <ProductCard
+              title={product.title}
+              image={product.image}
+              price={product.price}
+            />
+          </Link>
         ))}
       </div>
     </div>
@@ -69,7 +69,11 @@ const ProductList = (products) => {
 const ProductCard = (props) => {
   return (
     <div className={styles.productCard}>
-      <img src={props.image} alt={props.title} className={styles.productCardImg}/>
+      <img
+        src={props.image}
+        alt={props.title}
+        className={styles.productCardImg}
+      />
       <hr />
       <div className={styles.productCardText}>
         <div className={styles.productCardInfo}>

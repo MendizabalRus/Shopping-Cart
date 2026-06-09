@@ -1,0 +1,47 @@
+@import url("./variables.css");
+
+.productPage {
+    padding: 20px;
+    display: flex;
+    gap: 50px;
+    font-family: var(--font);
+}
+
+.productImg {
+    padding: 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    height: 500px;
+}
+
+.productInfo > hr{
+    margin: 20px 0px;
+}
+
+.buyingSection {
+    display: flex;
+    gap: 50px;
+}
+
+.quantity {
+    display: flex;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.quantity :not(hr) {
+    padding: 5px 10px;
+}
+
+.quantities {
+    cursor: pointer;
+}
+
+.addToCart {
+    padding: 5px 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--terciary-color);
+    font-weight: 600;
+}
