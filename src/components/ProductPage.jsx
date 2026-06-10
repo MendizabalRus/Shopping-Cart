@@ -56,6 +56,7 @@ const ProductPage = () => {
       <div className={styles.productInfo}>
         <h2>{product.title}</h2>
         <p>{product.description}</p>
+        <h3 className={styles.productPrice}>P.v.P.: {product.price}€</h3>
         <hr />
         <div className={styles.buyingSection}>
           <div className={styles.quantity}>

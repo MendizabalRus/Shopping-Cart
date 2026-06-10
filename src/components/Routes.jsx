@@ -3,6 +3,9 @@ import ErrorPage from './ErrorPage.jsx';
 import MainLayout from './MainLayout.jsx';
 import Shop from './Shop.jsx';
 import ProductPage from './ProductPage.jsx';
+import About from "./About.jsx"
+import Account from "./Account.jsx"
+import Cart from "./Cart.jsx"
 
 const routes = [
   {
@@ -26,8 +29,20 @@ const routes = [
           );
           return response.json();
         },
-        hydrateFallbackElement: <p>Loading...</p>
-      }
+        hydrateFallbackElement: <p>Loading...</p>,
+      },
+      {
+        path: "about",
+        element: <About />
+      },
+      {
+        path: "account",
+        element: <Account />
+      },
+      {
+        path: "cart",
+        element: <Cart />,
+      },
     ],
   },
 ];

@@ -16,8 +16,6 @@ const Header = ({cart = []}) => {
     setSearched((prev) => !prev);
   };
 
-  console.log(cart)
-
   const cartLength = cart.reduce((total, item) => total + (item.quantity || 0), 0);
 
   return (
@@ -34,9 +32,6 @@ const Header = ({cart = []}) => {
         <nav className={styles.headerRight}>
           <Link to="shop" className={styles.link}>
             Shop
-          </Link>
-          <Link to="best-sellers" className={styles.link}>
-            Best Sellers
           </Link>
           <Link to="about" className={styles.link}>
             About

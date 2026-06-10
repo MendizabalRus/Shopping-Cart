@@ -11,7 +11,14 @@
     padding: 20px;
     border: 2px solid var(--primary-color);
     border-radius: 10px;
+    width: 500px;
     height: 500px;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .productInfo > hr{

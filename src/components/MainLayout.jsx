@@ -10,6 +10,8 @@ import styles from "../style/MainLayout.module.css"
 const MainLayout = () => {
   const [cart, setCart] = useState([]);
 
+  console.log(cart)
+
   return (
     <>
       <div className={styles.aboveTheFold}>

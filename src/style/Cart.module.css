@@ -1,0 +1,70 @@
+@import url('./variables.css');
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  padding: 50px 100px;
+  font-family: var(--font);
+  background-color: var(--secondary-color);
+  color: var(--terciary-color);
+}
+
+.cartProduct {
+  display: flex;
+  gap: 50px;
+  padding: 20px 0px;
+  gap: 30px;
+}
+
+.cartProductImg {
+  width: 100px;
+  height: auto;
+}
+
+.productCardQuantity {
+    display: flex;
+    align-items: center;
+}
+
+.productCardQuantitySelector {
+  display: flex;
+  border: 1px solid var(--terciary-color);
+  border-radius: 10px;
+  align-self: flex-start;
+  width: fit-content;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    filter: invert(1);
+}
+
+.productCardPrices {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+}
+
+.productCardQuantity :not(hr) {
+  padding: 5px 10px;
+}
+
+.total {
+  display: flex;
+  gap: 10px;
+  align-self: flex-end;
+}
+
+.checkoutBtn {
+  width: fit-content;
+  align-self: flex-end;
+  border: 1px solid var(--terciary-color);
+  background-color: var(--primary-color);
+  color: var(--terciary-color);
+  border-radius: 10px;
+  padding: 5px 20px;
+  font-weight: 600;
+}
